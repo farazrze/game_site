@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import *
 
 def index(request):
     return render(request,'index.html')
@@ -11,3 +12,8 @@ def product(request):
 
 def shop(request):
     return render(request,'shop.html')
+
+def test(request):
+    game=Game.objects.all()
+    context={'game':game}
+    return render(request,'test.html',context)
