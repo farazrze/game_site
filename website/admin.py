@@ -1,5 +1,13 @@
 from django.contrib import admin
 from .models import *
 
-admin.site.register(Game)
 
+
+class Gameadmin(admin.ModelAdmin):
+    list_display=['id','name']
+
+
+
+
+admin.site.register(Game,Gameadmin)
+admin.site.register(Category)
