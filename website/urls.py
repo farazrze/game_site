@@ -9,4 +9,6 @@ urlpatterns = [
     path('shop',shop,name='shop'),
     path('<int:pid>',product,name='product'),
     path('test',test),
+    path('category/<str:cat_name>',product,name='category'),
+    path('search/',search,name='search')
 ]

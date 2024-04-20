@@ -63,7 +63,7 @@ https://templatemo.com/tm-589-lugx-gaming
           <ul>
             <li><span>Game ID:</span> {{post.id}}</li>
             {% for cat in post.category.all %}
-            <li><span>Genre:</span> <a href="#">{{cat.name}}{% if not forloop.last %},{% endif %}</a></li>
+            <li><span>Genre:</span> <a href="{% url 'website:category' cat_name=cat.name %}">{{cat.name}}{% if not forloop.last %},{% endif %}</a></li>
             {% endfor %}
             <li><span>Multi-tags:</span> <a href="#">War</a>, <a href="#">Battle</a>, <a href="#">Royal</a></li>
           </ul>

@@ -1,0 +1,8 @@
+{% load static %}
+
+<div class="search-input">
+    <form id="search" action="{% url 'website:search' %}" method="get">
+      <input type="text" placeholder="Type Something" id='searchText' name="s" onkeypress="handle" />
+      <button role="button">Search Now</button>
+    </form>
+  </div>
